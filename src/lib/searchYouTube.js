@@ -17,6 +17,7 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
         console.error(err)
       );
     });
+
 };
 
 export default searchYouTube;
