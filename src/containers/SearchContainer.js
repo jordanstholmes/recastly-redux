@@ -11,9 +11,9 @@ var mapStateToProps = state => {
 };
 var mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    handleSearchInputChange: (q) => {
+    handleSearchInputChange: _.debounce((q) => {
       dispatch(handleSearchChange(q));
-    }
+    }, 500)
   };
 };
 var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
